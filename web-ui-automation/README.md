@@ -33,8 +33,53 @@ My Web UI automation experience includes building and maintaining frameworks wit
 - Allure Reports
 - GitHub Actions
 - Jenkins
+- HTML Reporter
+- JUnit Reporter
 
 ## Featured Repositories
+
+### Playwright JavaScript E2E Framework
+
+Repository: https://github.com/matiasgalvez/playwright-js-e2e-framework
+
+A professional Playwright framework built with JavaScript to demonstrate modern Web UI automation best practices.
+
+This framework covers smoke and regression testing for a public e-commerce demo application, using Page Object Model, environment-based configuration, reporting and CI/CD integration.
+
+Covered flows include:
+
+* Valid login
+* Invalid login
+* Product inventory validation
+* Add product to cart
+* Cart validation
+* Checkout flow
+* Order confirmation
+* Smoke test scenarios
+* Regression test scenarios
+
+Key framework features:
+
+* Playwright with JavaScript
+* Page Object Model architecture
+* Environment configuration with `.env`
+* Smoke and regression test separation
+* HTML reporting
+* JUnit reporting for CI/CD
+* JSON reporting
+* Screenshots on failure
+* Videos on failure
+* Traces on retry
+* GitHub Actions workflow
+* Cross-browser configuration
+* Test data separation
+* Reusable page actions
+* CI-ready test execution
+
+QA value:
+
+This project demonstrates my ability to design a maintainable Playwright automation framework from scratch, organize test coverage by risk and execution type, integrate automated checks into CI/CD pipelines, and produce useful reports for debugging and release validation.
+
 
 ### WebdriverIO + Cucumber E2E Framework
 
