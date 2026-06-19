@@ -6,7 +6,7 @@ My professional experience includes building automation frameworks from scratch,
 
 ## Live Portfolio Website
 
-The interactive portfolio website is available through GitHub Pages.
+The interactive portfolio website is available at https://matiasgalvez.github.io/qa-automation-portfolio/
 
 ## Repository Contents
 
@@ -17,6 +17,7 @@ The interactive portfolio website is available through GitHub Pages.
 - `ci-cd-quality-gates/` — CI/CD testing strategy
 - `mobile-testing/` — Mobile testing strategy
 - `performance-testing/` — K6 and backend performance strategy
+- `ai-testing/` — AI-assisted QA workflows, Claude Code/Codex usage and LLM chatbot testing strategy
 - `qa-leadership/` — PR review, mentoring and automation standards
 
 ## Portfolio Areas
@@ -152,7 +153,21 @@ Sample artifacts:
 - K6 performance test strategy
 - Backend performance checklist
 
-### 7. QA Leadership and Engineering Standards
+### 7. AI-Assisted QA and LLM Testing
+
+Folder: `/ai-testing`
+
+This area demonstrates my experience using AI agents such as Claude Code, Codex and ChatGPT to support QA engineering tasks, as well as my approach to testing LLM-powered chat experiences in web applications.
+
+It includes:
+
+- AI agent usage in QA engineering
+- Claude Code and Codex usage examples
+- LLM chatbot testing strategy
+- Prompt evaluation checklist
+- Hallucination, safety and context validation criteria
+
+### 8. QA Leadership and Engineering Standards
 
 Demonstrates senior-level ownership beyond test execution.
 
