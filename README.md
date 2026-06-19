@@ -42,8 +42,9 @@ Covered skills:
 
 Featured project:
 
-- WebdriverIO + Cucumber E2E Framework  
-  Repository: https://github.com/matiasgalvez/qa-wdio-cucumber
+Repository: https://github.com/matiasgalvez/playwright-js-e2e-framework
+
+Modern Playwright E2E framework using JavaScript, Page Object Model, smoke/regression tagging, environment configuration, reporting and GitHub Actions CI/CD integration.
 
 ### 2. API and Backend Testing
 
@@ -213,6 +214,12 @@ Key features:
 Repository: https://github.com/matiasgalvez/cypress
 
 Cypress-based web automation project demonstrating frontend automation skills with JavaScript.
+
+### Playwright JavaScript E2E Framework
+
+Repository: https://github.com/matiasgalvez/playwright-js-e2e-framework
+
+Modern Playwright E2E framework using JavaScript, Page Object Model, smoke/regression tagging, environment configuration, reporting and GitHub Actions CI/CD integration.
 
 ### Selenium with Python
 

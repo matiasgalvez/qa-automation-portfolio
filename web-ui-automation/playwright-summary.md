@@ -1,55 +1,60 @@
 # Playwright Automation Summary
 
+Repository: https://github.com/matiasgalvez/playwright-js-e2e-framework
+
 ## Overview
 
-This section summarizes my experience using Playwright for modern Web UI automation and regression testing.
+This project demonstrates a modern Playwright E2E automation framework using JavaScript.
 
-Playwright is useful for reliable browser automation, cross-browser testing, tracing, screenshots, video capture and CI/CD execution.
+The framework validates common e-commerce flows using SauceDemo as a public demo application and includes smoke tests, regression tests, reporting, environment configuration and GitHub Actions CI/CD integration.
 
 ## Tech Stack
 
 - Playwright
 - JavaScript
-- TypeScript
-- Node.js
+- Page Object Model
 - GitHub Actions
+- HTML Report
+- JUnit Report
+- JSON Report
+- dotenv
+- ESLint
 
-## Experience Areas
+## Implemented Capabilities
 
-- Migrating existing automation from Puppeteer to Playwright
-- Creating E2E tests for critical user flows
-- Validating UI behavior across browsers
-- Using locators and assertions for stable tests
-- Running tests locally and in CI/CD pipelines
-- Reviewing test reliability and maintainability
+- Page Object Model architecture
+- Smoke and regression suites
+- Test tagging with `@smoke` and `@regression`
+- Environment-based configuration
+- Cross-browser projects for Chromium, Firefox and WebKit
+- HTML, JUnit and JSON reporting
+- Screenshots, videos and traces on failure
+- GitHub Actions CI/CD workflow
+- Scheduled regression execution
+- Pull request smoke validation
+
+## Covered Flows
+
+- Valid login
+- Invalid login
+- Locked out user validation
+- Empty username and password validation
+- Product sorting
+- Add and remove product from cart
+- Cart validation
+- Checkout required field validation
+- Checkout overview validation
+- Successful checkout
 
 ## QA Value
 
-Playwright helps improve regression confidence by providing:
+This project demonstrates my ability to:
 
-- Fast and reliable browser automation
-- Built-in waiting mechanisms
-- Trace viewer for debugging
-- Cross-browser execution
-- Screenshots and videos on failure
-- CI-friendly execution
-
-## Example Scenarios
-
-- Login validation
-- Navigation validation
-- Form validation
-- Checkout validation
-- API-assisted UI setup
-- Role-based user flows
-
-## Recommended Future Portfolio Work
-
-Create a public Playwright TypeScript framework with:
-
-- Page Object Model
-- API setup helpers
-- GitHub Actions workflow
-- HTML report
-- Cross-browser matrix
-- Example smoke and regression suites
+- Build a Playwright framework from scratch.
+- Apply automation best practices.
+- Separate smoke and regression coverage.
+- Use page objects and reusable test data.
+- Configure environment-driven execution.
+- Generate useful test reports and debugging artifacts.
+- Integrate automated tests into CI/CD pipelines.
+- Design tests around business-critical user flows.
