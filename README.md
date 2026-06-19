@@ -209,11 +209,22 @@ Key features:
 - Clean folder structure
 - Cross-platform execution scripts
 
-### Cypress Automation
+### Cypress JavaScript E2E Framework
 
-Repository: https://github.com/matiasgalvez/cypress
+Repository: https://github.com/matiasgalvez/cypress-js-e2e-framework
 
-Cypress-based web automation project demonstrating frontend automation skills with JavaScript.
+A Cypress Web UI automation framework using JavaScript, Page Object Model, environment configuration, smoke/regression separation, Mochawesome/JUnit reporting, CircleCI integration and an optional Jenkins pipeline.
+
+Covered areas:
+
+- Authentication
+- Navigation
+- Form controls
+- Dynamic loading
+- JavaScript dialogs
+- Smoke tests
+- Regression tests
+- CI/CD quality gates
 
 ### Playwright JavaScript E2E Framework
 
