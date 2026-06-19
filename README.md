@@ -1,8 +1,23 @@
-# Matias Galvez — Senior QA Automation Engineer / SDET Portfolio
+# Matias Galvez — Senior QA Automation Engineer / SDET / Senior Manual QA Engineer Portfolio
 
 This portfolio showcases my experience as a Senior QA Automation Engineer / SDET across web automation, API testing, backend validation, mobile testing, CI/CD quality gates, manual QA strategy, regression planning and quality leadership.
 
 My professional experience includes building automation frameworks from scratch, maintaining large regression suites, validating backend services, testing e-commerce and payment flows, contributing to CI/CD pipelines, reviewing pull requests, mentoring QA engineers and reducing regression execution from approximately one week to a few hours.
+
+## Live Portfolio Website
+
+The interactive portfolio website is available through GitHub Pages.
+
+## Repository Contents
+
+- `index.html`, `styles.css`, `script.js` — Interactive portfolio website
+- `web-ui-automation/` — Web UI automation strategy and examples
+- `api-testing/` — API and backend testing strategy
+- `manual-qa/` — Manual QA strategy and test artifacts
+- `ci-cd-quality-gates/` — CI/CD testing strategy
+- `mobile-testing/` — Mobile testing strategy
+- `performance-testing/` — K6 and backend performance strategy
+- `qa-leadership/` — PR review, mentoring and automation standards
 
 ## Portfolio Areas
 
