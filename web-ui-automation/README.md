@@ -95,11 +95,22 @@ Covered flows include:
 - Checkout flow
 - Order confirmation validation
 
-### Cypress Automation
+### Cypress JavaScript E2E Framework
 
-Repository: https://github.com/matiasgalvez/cypress
+Repository: https://github.com/matiasgalvez/cypress-js-e2e-framework
 
-Cypress-based UI automation examples using JavaScript.
+A Cypress Web UI automation framework using JavaScript, Page Object Model, environment configuration, smoke/regression separation, Mochawesome/JUnit reporting, CircleCI integration and an optional Jenkins pipeline.
+
+Covered areas:
+
+- Authentication
+- Navigation
+- Form controls
+- Dynamic loading
+- JavaScript dialogs
+- Smoke tests
+- Regression tests
+- CI/CD quality gates
 
 ### Selenium with Python
 
