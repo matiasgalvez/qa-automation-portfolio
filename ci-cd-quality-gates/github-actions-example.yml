@@ -1,0 +1,133 @@
+# Example quality-gate pipeline for a Playwright (UI + API) + k6 project.
+#
+#   pull_request  → lint, API smoke, UI smoke on Chromium        (blocks merge)
+#   push to main  → API + UI regression on 3 browsers            (blocks promotion)
+#   nightly       → full regression + k6 performance smoke       (triaged next morning)
+#
+# See ci-cd-strategy.md for the reasoning behind each stage.
+
+name: Quality Gates
+
+on:
+  pull_request:
+    branches: [main]
+  push:
+    branches: [main]
+  schedule:
+    - cron: '0 6 * * 1-5' # 06:00 UTC, weekdays
+  workflow_dispatch:
+
+concurrency:
+  group: ${{ github.workflow }}-${{ github.ref }}
+  cancel-in-progress: true
+
+env:
+  BASE_URL: ${{ vars.QA_BASE_URL }}
+  API_URL: ${{ vars.QA_API_URL }}
+  CI: true
+
+jobs:
+  lint:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+      - uses: actions/setup-node@v4
+        with: { node-version: 22, cache: npm }
+      - run: npm ci
+      - run: npm run lint
+
+  api:
+    name: API ${{ github.event_name == 'pull_request' && 'smoke' || 'regression' }}
+    needs: lint
+    runs-on: ubuntu-latest
+    timeout-minutes: 15
+    steps:
+      - uses: actions/checkout@v4
+      - uses: actions/setup-node@v4
+        with: { node-version: 22, cache: npm }
+      - run: npm ci
+      - name: Run API tests
+        run: npx playwright test --project=api --grep "${{ github.event_name == 'pull_request' && '@smoke' || '@api' }}"
+        env:
+          API_USER: ${{ secrets.QA_API_USER }}
+          API_PASSWORD: ${{ secrets.QA_API_PASSWORD }}
+      - uses: actions/upload-artifact@v4
+        if: always()
+        with:
+          name: api-report
+          path: playwright-report/
+          retention-days: 14
+
+  ui:
+    name: UI ${{ matrix.browser }}
+    needs: api
+    runs-on: ubuntu-latest
+    timeout-minutes: 40
+    strategy:
+      fail-fast: false
+      matrix:
+        # PRs: Chromium only to keep the gate fast. main/nightly: all engines.
+        browser: ${{ github.event_name == 'pull_request' && fromJSON('["chromium"]') || fromJSON('["chromium","firefox","webkit"]') }}
+    steps:
+      - uses: actions/checkout@v4
+      - uses: actions/setup-node@v4
+        with: { node-version: 22, cache: npm }
+      - run: npm ci
+      - name: Install browser
+        run: npx playwright install --with-deps ${{ matrix.browser }}
+      - name: Run UI tests
+        run: >
+          npx playwright test --project=${{ matrix.browser }}
+          --grep "${{ github.event_name == 'pull_request' && '@smoke' || '@regression|@smoke' }}"
+          --grep-invert "@quarantine"
+      - uses: actions/upload-artifact@v4
+        if: always()
+        with:
+          name: ui-report-${{ matrix.browser }}
+          path: |
+            playwright-report/
+            test-results/
+          retention-days: 14
+
+  quarantine:
+    # Quarantined tests still run so we know when they are fixed, but never block.
+    if: github.event_name != 'pull_request'
+    needs: api
+    runs-on: ubuntu-latest
+    continue-on-error: true
+    steps:
+      - uses: actions/checkout@v4
+      - uses: actions/setup-node@v4
+        with: { node-version: 22, cache: npm }
+      - run: npm ci && npx playwright install --with-deps chromium
+      - run: npx playwright test --project=chromium --grep "@quarantine"
+
+  performance:
+    if: github.event_name == 'schedule' || github.event_name == 'workflow_dispatch'
+    needs: api
+    runs-on: ubuntu-latest
+    timeout-minutes: 15
+    steps:
+      - uses: actions/checkout@v4
+      - uses: grafana/setup-k6-action@v1
+      - name: k6 smoke (fails the job if thresholds are crossed)
+        run: k6 run --summary-export=k6-summary.json performance/smoke.js
+        env:
+          API_URL: ${{ env.API_URL }}
+      - uses: actions/upload-artifact@v4
+        if: always()
+        with:
+          name: k6-summary
+          path: k6-summary.json
+
+  notify:
+    if: always() && github.event_name == 'schedule'
+    needs: [api, ui, performance]
+    runs-on: ubuntu-latest
+    steps:
+      - name: Post nightly result
+        run: |
+          echo "API: ${{ needs.api.result }} | UI: ${{ needs.ui.result }} | Perf: ${{ needs.performance.result }}"
+          # curl -X POST -H 'Content-type: application/json' \
+          #   --data "{\"text\":\"Nightly: API ${{ needs.api.result }}, UI ${{ needs.ui.result }}\"}" \
+          #   "${{ secrets.SLACK_WEBHOOK_URL }}"
