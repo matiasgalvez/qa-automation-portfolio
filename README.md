@@ -232,12 +232,6 @@ Repository: https://github.com/matiasgalvez/playwright-js-e2e-framework
 
 Modern Playwright E2E framework using JavaScript, Page Object Model, smoke/regression tagging, environment configuration, reporting and GitHub Actions CI/CD integration.
 
-### Selenium with Python
-
-Repository: https://github.com/matiasgalvez/Selenium-with-Python
-
-Selenium automation project demonstrating Python-based browser automation experience.
-
 ## Professional Value
 
 This portfolio is designed to show how I approach QA as an engineering discipline:

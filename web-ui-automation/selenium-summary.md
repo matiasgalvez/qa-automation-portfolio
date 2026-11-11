@@ -1,9 +1,6 @@
 # Selenium Automation Summary
 
-Repositories:
-
-- Python: https://github.com/matiasgalvez/Selenium-with-Python
-- Java: https://github.com/matiasgalvez/selenium-java
+I used Selenium professionally at Sovos (2019–2021) for web application UI automation, alongside Cypress. Today I default to Playwright for new projects, but I am comfortable maintaining and extending existing Selenium suites.
 
 ## Overview
 

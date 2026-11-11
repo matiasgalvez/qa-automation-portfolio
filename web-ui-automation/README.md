@@ -112,18 +112,6 @@ Covered areas:
 - Regression tests
 - CI/CD quality gates
 
-### Selenium with Python
-
-Repository: https://github.com/matiasgalvez/Selenium-with-Python
-
-Selenium automation examples using Python.
-
-### Selenium with Java
-
-Repository: https://github.com/matiasgalvez/selenium-java
-
-Selenium automation examples using Java.
-
 ## Professional Value
 
 This area of the portfolio shows that I can:
