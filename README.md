@@ -192,6 +192,12 @@ Sample artifacts:
 
 ## Featured Projects
 
+### Playwright TypeScript Quality Suite
+
+Repository: https://github.com/matiasgalvez/playwright-ts-quality-suite · Test report: https://matiasgalvez.github.io/playwright-ts-quality-suite/
+
+Full-stack quality suite for OWASP Juice Shop running in Docker: API, UI (Chromium, Firefox, WebKit, mobile), accessibility (axe), security regression and k6 performance tests in TypeScript, with Zod contract validation and a GitHub Actions pipeline that publishes a merged HTML report to GitHub Pages. It found and tracks 5 real vulnerabilities (SQL injection, IDOR, mass assignment, password hash leak, reflected XSS) and 3 accessibility violations.
+
 ### WebdriverIO + Cucumber E2E Automation Framework
 
 Repository: https://github.com/matiasgalvez/qa-wdio-cucumber
