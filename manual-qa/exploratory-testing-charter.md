@@ -49,7 +49,7 @@ Time box: 90 min
 
 ### Debrief
 
-- **Bugs:** 8 (2 Blocker/Critical in the revenue path). Full reports in `bug-report-samples.md`.
+- **Bugs:** 8 (2 Blocker/Critical in the revenue path). Full reports in [`bug-report-samples.md`](bug-report-samples.md).
 - **Risks raised:** client-only validation (BUG-01) suggests the API may accept incomplete orders → added an API negative test to the plan.
 - **Questions for the team:** is there a server-side price source of truth? Which price reaches the order payload for `visual_user`?
 - **Coverage gaps found:** automated suite only used `standard_user` → proposed data-driven checkout tests across all roles.

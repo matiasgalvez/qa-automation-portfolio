@@ -38,7 +38,7 @@ I mentor junior QA engineers on automation usage, framework maintenance, coverag
 | Area | Topics |
 |---|---|
 | Testing fundamentals | Test design techniques (boundaries, equivalence classes, decision tables), risk-based prioritization, exploratory charters |
-| Bug reporting | Reproducible steps, evidence, severity vs priority, see `../manual-qa/bug-report-samples.md` |
+| Bug reporting | Reproducible steps, evidence, severity vs priority, see [`bug-report-samples.md`](../manual-qa/bug-report-samples.md) |
 | Automation | Framework structure, page objects, selectors, waiting, fixtures, data |
 | API | HTTP basics, status codes, auth, Postman, schema validation |
 | Debugging | Reading traces, DevTools network tab, logs in Kibana/Datadog, isolating a flaky test |

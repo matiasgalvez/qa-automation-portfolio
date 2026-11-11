@@ -79,4 +79,4 @@ Common root causes I fix: hardcoded waits, shared test data, order-dependent tes
 
 ## Example
 
-`github-actions-example.yml` in this folder implements the PR, merge and nightly stages above for a Playwright + API + k6 project.
+[`github-actions-example.yml`](github-actions-example.yml) in this folder implements the PR, merge and nightly stages above for a Playwright + API + k6 project.

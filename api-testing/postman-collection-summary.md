@@ -138,7 +138,7 @@ npx newman run restful-booker.postman_collection.json \
   --bail
 ```
 
-The JUnit file feeds the pipeline's test tab; the HTML report is uploaded as a build artifact. See `../ci-cd-quality-gates/github-actions-example.yml` for the pipeline.
+The JUnit file feeds the pipeline's test tab; the HTML report is uploaded as a build artifact. See [`github-actions-example.yml`](../ci-cd-quality-gates/github-actions-example.yml) for the pipeline.
 
 ## Things That Make Collections Hard to Maintain (and How I Avoid Them)
 

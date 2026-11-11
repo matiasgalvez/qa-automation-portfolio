@@ -20,6 +20,19 @@ The interactive portfolio website is available at https://matiasgalvez.github.io
 - `ai-testing/` — AI-assisted QA workflows, Claude Code/Codex usage and LLM chatbot testing strategy
 - `qa-leadership/` — PR review, mentoring and automation standards
 
+## Document Index
+
+| Area | Documents |
+|---|---|
+| Manual QA | [Test plan](manual-qa/test-plan.md) · [Bug report samples (8 real, reproduced)](manual-qa/bug-report-samples.md) · [Exploratory testing charters](manual-qa/exploratory-testing-charter.md) · [Regression strategy + release readiness checklist](manual-qa/regression-strategy.md) |
+| API & Backend | [API test strategy](api-testing/api-test-strategy.md) · [Postman collection structure](api-testing/postman-collection-summary.md) · [Schema validation examples](api-testing/schema-validation-examples.md) |
+| Web UI Automation | [Overview](web-ui-automation/README.md) · [E2E test strategy](web-ui-automation/e2e-test-strategy.md) · [Test scenarios](web-ui-automation/test-scenarios.md) · [Page Object Model](web-ui-automation/page-object-model.md) · [Playwright](web-ui-automation/playwright-summary.md) · [Cypress](web-ui-automation/cypress-summary.md) · [WebdriverIO + Cucumber](web-ui-automation/webdriverio-cucumber-summary.md) · [Selenium](web-ui-automation/selenium-summary.md) |
+| CI/CD | [CI/CD strategy and quality gates](ci-cd-quality-gates/ci-cd-strategy.md) · [GitHub Actions example](ci-cd-quality-gates/github-actions-example.yml) |
+| Performance | [k6 performance strategy](performance-testing/k6-performance-strategy.md) |
+| Mobile | [Mobile test strategy](mobile-testing/mobile-test-strategy.md) |
+| AI / LLM Testing | [Overview](ai-testing/README.md) · [AI agent usage](ai-testing/ai-agent-usage.md) · [LLM chatbot testing strategy](ai-testing/llm-chat-testing-strategy.md) · [Prompt evaluation checklist](ai-testing/prompt-evaluation-checklist.md) |
+| QA Leadership | [PR review checklist](qa-leadership/pr-review-checklist.md) · [Automation standards + coverage roadmap](qa-leadership/automation-standards.md) · [Mentoring guidelines](qa-leadership/mentoring-guidelines.md) |
+
 ## Portfolio Areas
 
 ### 1. Web UI Automation

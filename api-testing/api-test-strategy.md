@@ -63,7 +63,7 @@ Example service: an order API behind a checkout.
 | API-N09 | Same `POST /payments` sent twice with one idempotency key | One charge only |
 | API-N10 | `PUT /orders/{id}` after the order is shipped | `409`, order unchanged |
 
-API-N01 is exactly the kind of test that catches a client-side-only validation bug, like BUG-01 in `../manual-qa/bug-report-samples.md`.
+API-N01 is exactly the kind of test that catches a client-side-only validation bug, like BUG-01 in [`bug-report-samples.md`](../manual-qa/bug-report-samples.md).
 
 ## Backend Validation Checklist
 
@@ -89,7 +89,7 @@ When a UI or API test passes, I still verify the side effects for critical flows
 | Database checks | SQL Server Management Studio, `psql` |
 | Logs and metrics | Datadog, Grafana, Kibana / Elastic |
 
-See `postman-collection-summary.md` for collection structure and `schema-validation-examples.md` for code.
+See [`postman-collection-summary.md`](postman-collection-summary.md) for collection structure and [`schema-validation-examples.md`](schema-validation-examples.md) for code.
 
 ## CI/CD Usage
 

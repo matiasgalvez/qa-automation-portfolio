@@ -54,10 +54,10 @@ I rank risk as **impact × likelihood** and use it to decide depth of testing an
 |---|---|---|
 | API | Status codes, schemas, totals, auth, negative cases | Postman collection + automated API suite in CI |
 | UI E2E | Critical journeys (login → cart → checkout → confirmation) | Playwright, smoke on PR, full regression nightly |
-| Manual exploratory | New UI, edge cases, usability, copy | Time-boxed charters (see `exploratory-testing-charter.md`) |
+| Manual exploratory | New UI, edge cases, usability, copy | Time-boxed charters (see [`exploratory-testing-charter.md`](exploratory-testing-charter.md)) |
 | Visual / responsive | Match to Figma, breakpoints | Manual on emulated devices + BrowserStack real devices |
 | Accessibility | Keyboard navigation, labels, contrast | axe scan + manual keyboard pass |
-| Regression | Existing behavior unchanged | Risk-based selection (see `regression-strategy.md`) |
+| Regression | Existing behavior unchanged | Risk-based selection (see [`regression-strategy.md`](regression-strategy.md)) |
 
 ## 5. Environments and Data
 
@@ -80,7 +80,7 @@ Browsers: Chrome, Firefox, Safari (latest), plus Safari iOS and Chrome Android o
 - No open Blocker or Critical defects; Major defects have an agreed plan.
 - Full automated regression green on staging (known flaky tests triaged, not ignored).
 - Exploratory sessions completed for every in-scope area.
-- Release readiness checklist signed off (see `regression-strategy.md`).
+- Release readiness checklist signed off (see [`regression-strategy.md`](regression-strategy.md)).
 
 ## 8. Sample Test Cases
 
@@ -110,7 +110,7 @@ Data: First "Ana", Last "Lopez", Postal "4000"
 ```
 
 ## 9. Defect Management
-- Tracked in Jira with the template in `bug-report-samples.md`.
+- Tracked in Jira with the template in [`bug-report-samples.md`](bug-report-samples.md).
 - Severity reflects user/business impact; priority is agreed with the Product Owner.
 - Blockers are raised in the team channel immediately, not only in Jira.
 - Every fixed defect gets a retest and, where it makes sense, an automated regression test.

@@ -43,7 +43,7 @@ I review pull requests daily, both test code and product code. On product PRs my
 - [ ] Passed in CI (more than once if timing-sensitive)
 
 ### Maintainability
-- [ ] Follows the framework structure and naming (`automation-standards.md`)
+- [ ] Follows the framework structure and naming ([`automation-standards.md`](automation-standards.md))
 - [ ] Page objects reused; no duplicated locators
 - [ ] Test data in `test-data/` or builders, not inline magic values
 - [ ] Readable title that describes the behavior

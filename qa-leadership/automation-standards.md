@@ -106,7 +106,7 @@ export class CheckoutPage {
 
 ## 10. Code Review
 
-- All test code goes through PR review, same as product code (see `pr-review-checklist.md`).
+- All test code goes through PR review, same as product code (see [`pr-review-checklist.md`](pr-review-checklist.md)).
 - Lint (ESLint + Prettier) runs in CI; style is not debated in reviews.
 - New tests must pass in CI three times before merge when they touch timing-sensitive areas.
 
